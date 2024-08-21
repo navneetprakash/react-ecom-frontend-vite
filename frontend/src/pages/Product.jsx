@@ -82,6 +82,19 @@ const Product = () => {
         </div>
 
       </div>
+      {/* ---------Description & Review Section----- */}
+      <div className="mt-20">
+        <div className="flex">
+          <b className="border px-5 py-3 text-sm">Description</b>
+          <p className="border px-5 py-3 text-sm">Reviews (122)</p>
+        </div>
+
+        <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
+          <p>A lightweight pullover shirt, typically made from knit fabric, is designed to be close-fitting and features a round neckline along with short sleeves. This versatile garment can be worn both as an undershirt, providing an additional layer underneath other clothing, or as an outer layer on its own.</p>
+          <p> Its snug fit and simple design make it suitable for various occasions, whether as a base layer for added warmth or as a standalone piece for casual wear. The round neckline contributes to its classic and timeless style, while the short sleeves ensure comfort and ease of movement. This type of shirt is often chosen for its practicality and comfort, serving as a fundamental piece in both casual and layered outfits.</p>
+        </div>
+
+      </div>
 
     </div>) : <div className="opacity-0"></div>;
 };
