@@ -12,13 +12,12 @@ const RelatedProducts = ({ category, subCategory }) => {
 
   useEffect(() => {
 
-    if (products.length > 0) {
+    const filteredProducts = products.filter(
+      (item) => item.category === category && item.subCategory === subCategory
+    );
+    setRelated(filteredProducts.slice(0, 5));
 
-      let relatedProducts = products.filter(item => item.category === category && item.subCategory === subCategory);
-      setRelated(relatedProducts.slice(0, 5));
-    }
-
-  }, [products]);
+  }, [products, category, subCategory]);
 
   RelatedProducts.propTypes = {
     category: PropTypes.string,
