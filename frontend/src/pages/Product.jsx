@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/assets";
+import RelatedProducts from "../components/RelatedProducts";
 
 const Product = () => {
 
@@ -93,8 +94,10 @@ const Product = () => {
           <p>A lightweight pullover shirt, typically made from knit fabric, is designed to be close-fitting and features a round neckline along with short sleeves. This versatile garment can be worn both as an undershirt, providing an additional layer underneath other clothing, or as an outer layer on its own.</p>
           <p> Its snug fit and simple design make it suitable for various occasions, whether as a base layer for added warmth or as a standalone piece for casual wear. The round neckline contributes to its classic and timeless style, while the short sleeves ensure comfort and ease of movement. This type of shirt is often chosen for its practicality and comfort, serving as a fundamental piece in both casual and layered outfits.</p>
         </div>
-
       </div>
+
+      {/* ------Related Products Section------- */}
+      <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
 
     </div>) : <div className="opacity-0"></div>;
 };
