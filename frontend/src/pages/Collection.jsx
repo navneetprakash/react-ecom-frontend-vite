@@ -8,11 +8,10 @@ const Collection = () => {
 
   const { products, search, showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
-  const [filterProducts, setFilterProducts] = useState([]);
+  const [filterProducts, setFilterProducts] = useState(products);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [sortType, setSortType] = useState('relavent');
-
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
@@ -64,19 +63,18 @@ const Collection = () => {
   };
 
   const sortProduct = () => {
-    let filterProductsCopy = filterProducts.slice();
+    let productsCopy = [...filterProducts];
 
     switch (sortType) {
-      case 'low-high': setFilterProducts(filterProductsCopy.sort((a, b) => (a.price - b.price)));
+      case 'low-high': setFilterProducts(productsCopy.sort((a, b) => (a.price - b.price)));
         break;
 
-      case 'high-low': setFilterProducts(filterProductsCopy.sort((a, b) => (b.price - a.price)));
+      case 'high-low': setFilterProducts(productsCopy.sort((a, b) => (b.price - a.price)));
         break;
 
       default: applyFilter();
         break;
     }
-
   };
 
   useEffect(() => {
@@ -86,7 +84,8 @@ const Collection = () => {
 
   useEffect(() => {
     sortProduct();
-  }), [sortType];
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sortType]);
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10  pt-10 border-t checkbox-size'>

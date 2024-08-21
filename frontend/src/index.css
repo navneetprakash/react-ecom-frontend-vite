@@ -22,6 +22,9 @@ a.active hr {
   width: 1.75rem;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
 
 @media (max-width: 640px) {
   a.active {
