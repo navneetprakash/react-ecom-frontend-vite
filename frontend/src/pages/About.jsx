@@ -15,7 +15,7 @@ const About = () => {
           <p>Welcome to Style Haven—your ultimate destination for fashion and elegance! At Style Haven, we believe that style is a form of self-expression and everyone deserves to feel confident and fabulous.</p>
           <p>Founded in 2024 by a team of fashion enthusiasts and industry veterans, Style Haven began with a simple yet ambitious goal: to curate a collection of clothing and accessories that reflect the latest trends while maintaining timeless appeal.</p>
           <b className="text-gray-800">Our Mission</b>
-          <p>Our mission is to make high-quality, stylish fashion accessible to everyone. We are committed to offering a diverse range of products that cater to various tastes, preferences, and occasions. Whether you're looking for a chic dress for a special event or a comfortable yet stylish everyday outfit, Style Haven has you covered.</p>
+          <p>Our mission is to make high-quality, stylish fashion accessible to everyone. We are committed to offering a diverse range of products that cater to various tastes, preferences, and occasions. Whether you are looking for a chic dress for a special event or a comfortable yet stylish everyday outfit, Style Haven has you covered.</p>
         </div>
       </div>
 
